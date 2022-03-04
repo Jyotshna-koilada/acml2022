@@ -1,0 +1,362 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>CMD: Controllable Matrix Decomposition with Global Optimization for Deep Neural Network Compression - ACML 2022</title>
+<meta name="description" content="The Asian Conference on Machine Learning (ACML) is an international conference in the area of machine learning. It aims at providing a leading international forum for researchers in Machine Learning and related fields to share their new ideas and achievements.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="ACML 2022">
+<meta property="og:title" content="CMD: Controllable Matrix Decomposition with Global Optimization for Deep Neural Network Compression">
+<meta property="og:url" content="http://www.acml-conf.org/2022/conference/accepted-papers/7/">
+
+
+  <meta property="og:description" content="The Asian Conference on Machine Learning (ACML) is an international conference in the area of machine learning. It aims at providing a leading international forum for researchers in Machine Learning and related fields to share their new ideas and achievements.">
+
+
+
+  <meta property="og:image" content="http://www.acml-conf.org/2022/assets/images/acml-logo.png">
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://www.acml-conf.org/2022/conference/accepted-papers/7/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "ACML",
+      "url": "http://www.acml-conf.org/2022/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/2022/assets/css/main.css?v=db7509f6e79f21c87c3a64dd7a50f247">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+
+    <!-- start custom head snippets -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/2022/assets/images/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/2022/assets/images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/2022/assets/images/favicons/favicon-16x16.png">
+<link rel="manifest" href="/2022/assets/images/favicons/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--paper wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/2022/"><img src="/2022/assets/images/acml-logo.png" alt=""></a>
+        
+        <a class="site-title" href="/2022/">
+          ACML 2022
+          <span class="site-subtitle">The 14th Asian Conference on Machine Learning</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/2022/news/">News</a>
+              
+            </li><li class="masthead__menu-item">
+              <a href="javascript:void(0);">Calls <i class="fa fa-caret-down"></i></a>
+              
+                <ul class="dropdown hidden">
+                <li><a href="/2022/calls/papers/">Papers</a></li><li><a href="/2022/calls/tutorials/">Tutorials</a></li><li><a href="/2022/calls/workshops/">Workshops</a></li><li><a href="/2022/calls/nominations/">Nominations</a></li></ul>
+              
+            </li><li class="masthead__menu-item">
+              <a href="javascript:void(0);">Participants <i class="fa fa-caret-down"></i></a>
+              
+                <ul class="dropdown hidden">
+                <li><a href="/2022/participants/registration/">Registration</a></li><li><a href="/2022/participants/author/">Author</a></li></ul>
+              
+            </li><li class="masthead__menu-item">
+              <a href="/2022/program/">Program</a>
+              
+            </li><li class="masthead__menu-item">
+              <a href="javascript:void(0);">Conference <i class="fa fa-caret-down"></i></a>
+              
+                <ul class="dropdown hidden">
+                <li><a href="/2022/conference/accepted-papers/">Accepted Papers</a></li><li><a href="/2022/conference/invited-speakers/">Invited Speakers</a></li><li><a href="/2022/conference/awards/">Awards</a></li></ul>
+              
+            </li><li class="masthead__menu-item">
+              <a href="javascript:void(0);">School <i class="fa fa-caret-down"></i></a>
+              
+                <ul class="dropdown hidden">
+                <li><a href="/2022/school/">Home</a></li><li><a href="/2022/school/schedule/">Schedule</a></li><li><a href="/2022/school/call-for-applications/">Call for Applications</a></li></ul>
+              
+            </li><li class="masthead__menu-item">
+              <a href="/2022/tutorials/">Tutorial</a>
+              
+            </li><li class="masthead__menu-item">
+              <a href="/2022/workshops/">Workshop</a>
+              
+            </li><li class="masthead__menu-item">
+              <a href="javascript:void(0);">Organization <i class="fa fa-caret-down"></i></a>
+              
+                <ul class="dropdown hidden">
+                <li><a href="/2022/committees/">ACML 2022 Committees</a></li><li><a href="http://acml-conf.org/Committee.ashx">Steering Committees</a></li></ul>
+              
+            </li><li class="masthead__menu-item">
+              <a href="javascript:void(0);">Misc <i class="fa fa-caret-down"></i></a>
+              
+                <ul class="dropdown hidden">
+                <li><a href="http://acml-conf.org/">Past Conferences</a></li></ul>
+              
+            </li><li class="masthead__menu-item">
+              <a href="/2022/contact/">Contact</a>
+              
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- Modified from: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/sidebar.html -->
+
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Conference</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/2022/conference/accepted-papers/">Accepted Papers</a></li>
+          
+            <li><a href="/2022/conference/invited-speakers/">Invited Speakers</a></li>
+          
+            <li><a href="/2022/conference/awards/">Awards</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+    
+  
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="CMD: Controllable Matrix Decomposition with Global Optimization for Deep Neural Network Compression">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">CMD: Controllable Matrix Decomposition with Global Optimization for Deep Neural Network Compression
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        
+  <b>Haonan Zhang (Institute of Artificial Intelligence and Robotics, Xi'an Jiaotong University); Longjun Liu (Institute of Artificial Intelligence and Robotics, Xi'an Jiaotong University)*; Hengyi Zhou (Institute of Artificial Intelligence and Robotics, Xi'an Jiaotong University); Hongbin Sun (Institute of Artificial Intelligence and Robotics, Xi'an Jiaotong University); Nanning Zheng (Xi'an Jiaotong University)</b>
+  <hr>
+
+
+
+
+
+
+
+
+<h2>Abstract</h2>
+The compression and acceleration of Deep neural networks (DNNs) are necessary steps to deploy sophisticated networks into resource-constrained hardware systems. Due to the weight matrix tends to be low-rank and sparse, several low-rank and sparse compression schemes are leveraged to reduce the overwhelmed weight parameters of DNNs. In these previous schemes, how to make the most of the low-rank and sparse components of weight matrices and how to globally decompose the weight matrix of different layers for efficient compression need to be further investigated. In this paper, in order to effectively utilize the low-rank and sparse characteristics of the weight matrix, we first introduce a sparse coefficient to dynamically control the allocation between the low-rank and sparse components, and an efficient reconstructed network is designed to reduce the inference time. Secondly, since the results of low-rank decomposition can affect the compression ratio and accuracy of DNNs, we establish an optimization problem to automatically select the optimal hyperparameters of the compressed network and achieve global compression for all the layers of network synchronously. Finally, to solve the optimization problem, we present a decomposition-searching algorithm to search the optimal solution. The algorithm can dynamically keep the balance between the compression ratio and accuracy. Extensive experiments of AlexNet, VGG-16 and ResNet-18 on CIFAR-10 and ImageNet are employed to evaluate the effectiveness of the proposed approach. After slight fine-tuning, compressed networks have gained 1.2X to 11.3X speedup and our method reduces the size of different networks by 1.4X to 14.6X.
+
+
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <!-- Modified from: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/footer.html -->
+<!--<div class="page__footer-follow">
+  <ul class="footer-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/acml-conf/acml2022" rel="nofollow noopener noreferrer" target="_blank"><i class="fab fa-fw fa-github" aria-hidden="true"></i></a></li>
+        
+      
+    
+
+    
+  </ul>
+</div>-->
+
+<div class="page__footer-copyright">
+  &copy; 2022 <a href="http://www.acml-conf.org/" rel="nofollow" target="_blank"><b>ACML</b></a>. 
+  Powered by <a href="https://jekyllrb.com" rel="nofollow" target="_blank">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow" target="_blank">Minimal Mistakes</a>.
+</div>
+      </footer>
+    </div>
+
+    
+  <script src="/2022/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+  
+    <script src="/2022/assets/js/luxon.min.js?v=3adaa725e82cebbf7b8a6d98227f38f0"></script>
+  
+    <script src="/2022/assets/js/tz-select.js?v=241f238e266566f230c4fb4c2cca92de"></script>
+  
+    <script src="/2022/assets/js/custom.js?v=a7b6512838c8a68acc605c8598bae995"></script>
+  
+
+
+  </body>
+</html>

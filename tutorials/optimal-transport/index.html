@@ -1,0 +1,337 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Optimal Transport - ACML 2022</title>
+<meta name="description" content="The Asian Conference on Machine Learning (ACML) is an international conference in the area of machine learning. It aims at providing a leading international forum for researchers in Machine Learning and related fields to share their new ideas and achievements.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="ACML 2022">
+<meta property="og:title" content="Optimal Transport">
+<meta property="og:url" content="http://www.acml-conf.org/2022/tutorials/optimal-transport/">
+
+
+  <meta property="og:description" content="The Asian Conference on Machine Learning (ACML) is an international conference in the area of machine learning. It aims at providing a leading international forum for researchers in Machine Learning and related fields to share their new ideas and achievements.">
+
+
+
+  <meta property="og:image" content="http://www.acml-conf.org/2022/assets/images/acml-logo.png">
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://www.acml-conf.org/2022/tutorials/optimal-transport/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "ACML",
+      "url": "http://www.acml-conf.org/2022/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/2022/assets/css/main.css?v=db7509f6e79f21c87c3a64dd7a50f247">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+
+    <!-- start custom head snippets -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/2022/assets/images/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/2022/assets/images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/2022/assets/images/favicons/favicon-16x16.png">
+<link rel="manifest" href="/2022/assets/images/favicons/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--paper wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/2022/"><img src="/2022/assets/images/acml-logo.png" alt=""></a>
+        
+        <a class="site-title" href="/2022/">
+          ACML 2022
+          <span class="site-subtitle">The 14th Asian Conference on Machine Learning</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/2022/news/">News</a>
+              
+            </li><li class="masthead__menu-item">
+              <a href="javascript:void(0);">Calls <i class="fa fa-caret-down"></i></a>
+              
+                <ul class="dropdown hidden">
+                <li><a href="/2022/calls/papers/">Papers</a></li><li><a href="/2022/calls/tutorials/">Tutorials</a></li><li><a href="/2022/calls/workshops/">Workshops</a></li><li><a href="/2022/calls/nominations/">Nominations</a></li></ul>
+              
+            </li><li class="masthead__menu-item">
+              <a href="javascript:void(0);">Participants <i class="fa fa-caret-down"></i></a>
+              
+                <ul class="dropdown hidden">
+                <li><a href="/2022/participants/registration/">Registration</a></li><li><a href="/2022/participants/author/">Author</a></li></ul>
+              
+            </li><li class="masthead__menu-item">
+              <a href="/2022/program/">Program</a>
+              
+            </li><li class="masthead__menu-item">
+              <a href="javascript:void(0);">Conference <i class="fa fa-caret-down"></i></a>
+              
+                <ul class="dropdown hidden">
+                <li><a href="/2022/conference/accepted-papers/">Accepted Papers</a></li><li><a href="/2022/conference/invited-speakers/">Invited Speakers</a></li><li><a href="/2022/conference/awards/">Awards</a></li></ul>
+              
+            </li><li class="masthead__menu-item">
+              <a href="javascript:void(0);">School <i class="fa fa-caret-down"></i></a>
+              
+                <ul class="dropdown hidden">
+                <li><a href="/2022/school/">Home</a></li><li><a href="/2022/school/schedule/">Schedule</a></li><li><a href="/2022/school/call-for-applications/">Call for Applications</a></li></ul>
+              
+            </li><li class="masthead__menu-item">
+              <a href="/2022/tutorials/">Tutorial</a>
+              
+            </li><li class="masthead__menu-item">
+              <a href="/2022/workshops/">Workshop</a>
+              
+            </li><li class="masthead__menu-item">
+              <a href="javascript:void(0);">Organization <i class="fa fa-caret-down"></i></a>
+              
+                <ul class="dropdown hidden">
+                <li><a href="/2022/committees/">ACML 2022 Committees</a></li><li><a href="http://acml-conf.org/Committee.ashx">Steering Committees</a></li></ul>
+              
+            </li><li class="masthead__menu-item">
+              <a href="javascript:void(0);">Misc <i class="fa fa-caret-down"></i></a>
+              
+                <ul class="dropdown hidden">
+                <li><a href="http://acml-conf.org/">Past Conferences</a></li></ul>
+              
+            </li><li class="masthead__menu-item">
+              <a href="/2022/contact/">Contact</a>
+              
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- Modified from: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/sidebar.html -->
+
+
+
+  <article class="page nosidebar" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Optimal Transport">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Optimal Transport
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        
+
+
+
+
+
+
+
+<h2>Abstract</h2>
+Optimal transport has a long history in mathematics which was proposed by Gaspard Monge in the eighteenth century [Old/New book]. The theory was later investigated by Nobelists (for a joint prize in economic sciences) Koopmans and Kantorovich as well as Fields medalists Villani (2010) and Figalli (2018). Recently, advances in optimal transport theory have paved the way for its use in the ML/AI community, particularly for formulating models and learning with high-dimensional data. This tutorial aims to introduce pivotal computational, practical aspects of OT as well as applica- tions of OT for unsupervised learning problems. The topics of this tutorial consist of three main parts. In the first part, we will present the theoretical and computational background of optimal transport theory. In the second part, we will summarize the application of OT estimating of deep generative models. The clustering and topic modelling methods with OT will be summarized in the last part of the tutorial. Implementation of algorithms and illustrative examples will also be presented.
+
+
+
+
+<h2>Biographies</h2>
+
+  <b>Viet Huynh</b><br>
+  Viet Huynh is currently a postdoctoral researcher at the Machine Learning team at Monash University. Before going to Monash, he was a postdoctoral researcher in the PRaDA (Pattern Recognition and Data Analytics) center at Deakin University. He was a PhD student in PRaDA center at Deakin University from 2013 to early 2017. He worked under the supervision of Professor Dinh Phung and Professor Svetha Venkatesh. His PhD work focused on resorting big data to actionable information involves dealing with four dimensions of challenges in big data (called four Vs): volume, variety, velocity, veracity. He also received his B.Eng. and M.Eng. degrees in computer science in 2005 and 2009 respectively, all of which were completed at the University of Technology, Vietnam. He is interested in developing large-scale learning algorithms for probabilistic graphical models with complex and large-scale data, applying optimal transport theory to understand challenging problems in machine learning and deep learning, and applying deep generative models for learning with probabilistic graphical models. His research has been published in prestigious machine learning venues such as the Journal of Machine Learning Research (JMLR), JMLR, NeurIPS, ICML, ICLR, AISTATS, etc.
+  <br>
+  <br>
+
+  <b>He Zhao</b><br>
+  He Zhao obtained his PhD degree in machine learning at the Department of Data Sci- ence and AI (DSAI) of Monash University in 2019 and has been working as a research fellow at the department since then, under the supervision of Prof Dinh Phung. Be- fore coming to Monash, he got his bachelor’s and master’s degrees from Nankai Uni- versity and Nanjing University, respectively. He is interested in statistical machine learning and deep learning, including Bayesian statistics, optimal transport, robust machine learning, as well as their applications in computer vision, natural language processing, data mining, etc. His research has been published prestigious machine learning venues such as NeurIPS, ICML, and ICLR. He is a senior program committee (PC) member of IJCAI 2021 and regularly serves as a reviewer or PC member for leading computer science conferences and journals including NeurIPS, ICML, ICLR, TPAMI, JMLR, etc.
+  <br>
+  <br>
+
+  <b>Nhat Ho</b><br>
+  Nhat Ho is currently an Assistant Professor of Statistics and Data Sciences at the University of Texas at Austin. He is also a core member of the Machine Learning Laboratory. Before going to Austin, he was a postdoctoral fellow in the Electrical Engineering and Computer Science (EECS) Department under the mentorship of Professor Michael I. Jordan and Professor Martin J. Wainwright. Going further back in time, he finished his Phd degree in 2017 at the Department of Statistics, University of Michigan, Ann Arbor where his advisors are Professor Long Nguyen and Professor Ya’acov Ritov. A central theme of his research focuses on four principles of machine learning, statistics, and data science: heterogeneity of data, interpretability of models, stability and scalability of optimization and sampling algorithms. He has published and submitted over 50 papers in the top conferences and journals of machine learning, statistics, and data science, such as ICML, NeurIPS, ICLR, AISTATS, ICCV, Journal of Machine Learning Research (JMLR), Annals of Statistics, and SIAM Journal on Mathematics of Data Science.
+  <br>
+  <br>
+
+  <b>Dinh Phung</b><br>
+  Dinh Phung is currently a Professor in the Faculty of Information Technology, Monash University, Australia. He obtained a PhD from Curtin University in 2005 in the areas of machine learning and multimedia computing. His primary interest includes theoretical and applied machine learning with a current focus on deep learning, robust and adversarial ML, optimal transport and point process theory for ML, generative AI, Bayesian nonparametrics and graphical models. He publishes regularly, with over 250+ publications, in the areas of machine learning, AI, data science and application domains such as natural language processing (NLP), computer vision, digital health, cybersecurity and autism. He has delivered several invited and keynote talks, served on 40+ organizing committees and technical program committees for top-notch conferences in machine learning and data analytics. He is currently the lead Editor-in-Chief for the forthcoming 3rd edition of the Encyclopedia of Machine Learning and Data Science and was also the Finalist for Australian Museum Eureka Prize for Excellence in Data Science in 2020.
+  <br>
+  <br>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <!-- Modified from: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/footer.html -->
+<!--<div class="page__footer-follow">
+  <ul class="footer-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/acml-conf/acml2022" rel="nofollow noopener noreferrer" target="_blank"><i class="fab fa-fw fa-github" aria-hidden="true"></i></a></li>
+        
+      
+    
+
+    
+  </ul>
+</div>-->
+
+<div class="page__footer-copyright">
+  &copy; 2022 <a href="http://www.acml-conf.org/" rel="nofollow" target="_blank"><b>ACML</b></a>. 
+  Powered by <a href="https://jekyllrb.com" rel="nofollow" target="_blank">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow" target="_blank">Minimal Mistakes</a>.
+</div>
+      </footer>
+    </div>
+
+    
+  <script src="/2022/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+  
+    <script src="/2022/assets/js/luxon.min.js?v=3adaa725e82cebbf7b8a6d98227f38f0"></script>
+  
+    <script src="/2022/assets/js/tz-select.js?v=241f238e266566f230c4fb4c2cca92de"></script>
+  
+    <script src="/2022/assets/js/custom.js?v=a7b6512838c8a68acc605c8598bae995"></script>
+  
+
+
+  </body>
+</html>
